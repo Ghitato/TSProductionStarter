@@ -1,4 +1,4 @@
-Left Off: 3:02:00
+Left Off: 3:19:46
 
 tsc filename.ts --> Runs the typescript file
 tsc --init      --> Creates a simple TS config file
