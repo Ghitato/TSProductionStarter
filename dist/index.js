@@ -81,3 +81,61 @@ class SubUser2 extends User2 {
         this._courseCounter2 = 4; //We are inheriting a protected property from the extended class
     }
 }
+class instagramClone {
+    constructor(cameraMode, filter, burst) {
+        this.cameraMode = cameraMode;
+        this.filter = filter;
+        this.burst = burst;
+    }
+}
+class youtubeClone {
+    constructor(cameraMode, filter, burst, short) {
+        this.cameraMode = cameraMode;
+        this.filter = filter;
+        this.burst = burst;
+        this.short = short;
+    }
+    //Cannot use implements with a constructor where you are taking less from an interface 
+    createStory() {
+        return "Story was created";
+    }
+}
+//------------------------------------------------------------------------------------------------------------------------------------------------
+//Abstract Classes
+//Interview Question: If interfaces exist, what is the purpose of abstract classes
+//Abstract classes in TypeScript are classes that can be used as a base class, 
+//  but cannot be instantiated on its own. An abstract class provides a basic structure or blueprint for its subclasses, 
+//  but it is expected that the subclasses will provide the specific implementation details.
+//Abstract classes are useful when you want to provide a common structure or behavior for multiple related classes. 
+//  For example, you could create an abstract class for Shape, and then create concrete classes for Rectangle, Triangle, and Circle 
+//  that inherit from Shape and provide their own implementation.
+//In comparison, interfaces in TypeScript provide a way to define the structure of an object, without providing implementation details. 
+//  Interfaces are often used to define the shape of an object that will be passed between different parts of the code.
+//So, the main difference between abstract classes and interfaces is that abstract classes provide implementation, 
+//  while interfaces only provide structure. You would use abstract classes when you want to share implementation between multiple related classes, 
+//  and use interfaces when you want to define the structure of an object.
+class Shape {
+}
+class Rectangle extends Shape {
+    constructor(width, height) {
+        super();
+        this.width = width;
+        this.height = height;
+    }
+    getArea() {
+        return this.width * this.height;
+    }
+}
+const rectangle = new Rectangle(10, 20);
+console.log(rectangle.getArea()); // Output: 200
+class Rectangle2 {
+    constructor(width, height) {
+        this.width = width;
+        this.height = height;
+    }
+    getArea2() {
+        return this.width * this.height;
+    }
+}
+const rectangle2 = new Rectangle2(10, 20);
+console.log(rectangle.getArea()); // Output: 200
