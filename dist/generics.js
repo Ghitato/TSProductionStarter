@@ -22,3 +22,15 @@ function identityFour(arg) {
 }
 let output = identityFour("Hello"); // output is of type string
 identityFour({ brand: "Coke", type: 1 });
+//------------------------------------------------------------------------------------------------------------------------------
+//Generics with Arrow Functions
+function getSearchProduct(products) {
+    //Do some database operation
+    const myIndex = 3;
+    return products[myIndex];
+}
+const getMoreSearchProdcts = (products) => {
+    //Do some database operation
+    const myIndex = 4;
+    return products[myIndex];
+};

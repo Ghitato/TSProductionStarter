@@ -29,10 +29,24 @@ function identityFour<T>(arg: T): T {
 }
 let output = identityFour<string>("Hello");  // output is of type string
 
-//------------------------------------------------------------------------------------------------------------------------------
 interface Bottle{
     brand: string,
     type: number
 }
 
 identityFour<Bottle>({brand: "Coke", type: 1})
+
+//------------------------------------------------------------------------------------------------------------------------------
+//Generics with Arrow Functions
+
+function getSearchProduct<T>(products: T[]): T{
+    //Do some database operation
+    const myIndex = 3
+    return products[myIndex]
+}
+
+const getMoreSearchProdcts = <T,>(products: T[]): T => {
+    //Do some database operation
+    const myIndex = 4
+    return products[myIndex]
+}
